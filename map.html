@@ -1,0 +1,53 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Map</title>
+
+  <style media="screen">
+    body {
+      background-image: linear-gradient(to right, dodgerblue, darkblue);
+    }
+  </style>
+</head>
+<script>
+  var reqcount = 0;
+
+  navigator.geolocation.watchPosition(successCallback, errorCallback, options);
+
+  function successCallback(position) {
+    const {accuracy, latitude, longitude, altitude, heading, speed} = position.coords;
+    // Show a map centered at latitude / longitude.
+    reqcount++;
+    details.innerHTML = "Accuracy: " + accuracy + "<br>";
+    details.innerHTML += "Latitude: " + latitude + " | Longitude: " + longitude + "<br>";
+    details.innerHTML += "Altitude: " + altitude + "<br>";
+    details.innerHTML += "Heading: " + heading + "<br>";
+    details.innerHTML += "Speed: " + speed + "<br>";
+    details.innerHTML += "reqcount: " + reqcount;
+  }
+  function errorCallback(error) {
+
+  }
+  var options = {
+    //enableHighAccuracy: false,
+    //timeout: 5000,
+    //maximumAge: 0
+  };
+</script>
+
+<body>
+  <center>
+
+
+    <div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d3888.0294593088242!2d79.1591035647403!3d12.96996674085697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e2!4m5!1s0x3bad479f485a04d7%3A0x1999141eedeac994!2sCBMR%20block%2C%20VIT%20University%2C%20Vellore%2C%20Tamil%20Nadu!3m2!1d12.968400899999999!2d79.1598491!4m5!1s0x3bad47a28d145d6f%3A0xd1465a973c93afe3!2sSJT%2C%20VIT%20University%2C%20Vellore%2C%20Tamil%20Nadu!3m2!1d12.971022699999999!2d79.1639447!5e0!3m2!1sen!2sin!4v1673630278652!5m2!1sen!2sin"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    </div>
+  </center>
+</body>
+
+</html>

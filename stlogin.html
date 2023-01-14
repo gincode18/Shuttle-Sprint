@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Student Login</title>
+  <link rel="stylesheet" href="stlogin.css">
+</head>
+
+<body>
+  <header>
+    <h1>Shuttle Sprint</h1>
+    <nav>
+      <ul>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#wallet">Wallet</a></li>
+        <li><a href="index.html">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="student-landing-page">
+      <div class="student-info">
+        <h1>Welcome, Mark!</h1>
+        <p>Registration Number: 123456789</p>
+      </div>
+
+      <div class="wallet-section">
+        <h2>Wallet</h2>
+        <p>Current Balance: Rs1500</p>
+        <button id="view-transactions-btn">View Past Transactions</button>
+        <div id="transactions-modal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Transaction History</h3>
+            <table>
+              <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Amount</th>
+                <th>Type</th>
+              </tr>
+              <tr>
+                <td>01/01/2022</td>
+                <td>12:00 PM</td>
+                <td>$20</td>
+                <td>Top-up</td>
+              </tr>
+              <tr>
+                <td>01/02/2022</td>
+                <td>10:00 AM</td>
+                <td>$10</td>
+                <td>Purchase</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <form>
+          <label for="top-up-amount">Top-up Amount:</label>
+          <input type="number" id="top-up-amount" name="top-up-amount">
+          <button type="submit">Top-up</button>
+        </form>
+      </div>
+
+      <div class="journey-history-section">
+        <h2>Journey History</h2>
+        <button id="view-journeys-btn">View Past Journeys</button>
+        <div id="journeys-modal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Journey History</h3>
+            <table>
+              <tr>
+                <th>Date</th>
+                <th>Starting Point</th>
+                <th>Destination</th>
+                <th>Distance</th>
+              </tr>
+              <tr>
+                <td>01/01/2022</td>
+                <td>Home</td>
+                <td>College</td>
+                <td>5 miles</td>
+              </tr>
+              <tr>
+                <td>01/02/2022</td>
+                <td>College</td>
+                <td>Library</td>
+                <td>1 mile</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Contact us: <a href="mailto:info@shuttlesprint.com">info@shuttlesprint.com</a></p>
+      <p>Follow us on <a href="https://twitter.com/shuttlesprint">Twitter</a> and <a
+          href="https://www.facebook.com/shuttlesprint">Facebook</a></p>
+    </footer>
+</body>
+
+</html

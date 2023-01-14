@@ -1,0 +1,95 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.bus-filled {
+  background-color: green;
+  color: white;
+  padding: 8px;
+  text-align: center;
+}
+
+.bus-empty {
+  background-color: red;
+  color: white;
+  padding: 8px;
+  text-align: center;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+@media screen and (max-width:1040px){
+  table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-image: url('grad.jpeg');
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-image: url('grad.jpeg');
+  background-color: #f2f2f2;
+}
+
+.bus-filled {
+  background-color: green;
+  color: white;
+  padding: 8px;
+  text-align: center;
+}
+
+.bus-empty {
+  background-color: red;
+  color: white;
+  padding: 8px;
+  text-align: center;
+}
+
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+}

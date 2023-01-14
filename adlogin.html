@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Shuttle Sprint - Admin</title>
+  <link rel="stylesheet" type="text/css" href="adlogin.css">
+  <script src="js/admin.js"></script>
+</head>
+
+
+
+<h1>Shuttle Sprint - Admin</h1>
+<table>
+  <tr>
+    <th>Bus Number</th>
+    <th>Capacity</th>
+    <th>Status</th>
+    <th>Trips</th>
+    <th>Actions</th>
+  </tr>
+  <tr>
+    <td>MH 6651</td>
+    <td>23</td>
+    <td id="status-1">Filled</td>
+    <td id="trips-1">0</td>
+    <td>
+      <button onclick="toggleStatus(1)">Toggle Status</button>
+      <button onclick="incrementTrips(1)">Increment Trips</button>
+    </td>
+  </tr>
+  <tr>
+    <td>MH 2654</td>
+    <td>23</td>
+    <td id="status-2">Filled</td>
+    <td id="trips-2">0</td>
+    <td>
+      <button onclick="toggleStatus(2)">Toggle Status</button>
+      <button onclick="incrementTrips(2)">Increment Trips</button>
+    </td>
+  </tr>
+  <tr>
+    <td>MH 6593</td>
+    <td>23</td>
+    <td id="status-3">Empty</td>
+    <td id="trips-3">0</td>
+    <td>
+      <button onclick="toggleStatus(3)">Toggle Status</button>
+      <button onclick="incrementTrips(3)">Increment Trips</button>
+    </td>
+  </tr>
+  <tr>
+    <td>MH 5547</td>
+    <td>23</td>
+    <td id="status-4">Filled</td>
+    <td id="trips-4">0</td>
+    <td>
+      <button onclick="toggleStatus(4)">Toggle Status</button>
+      <button onclick="incrementTrips(4)">Increment Trips</button>
+    </td>
+  </tr>
+  <tr>
+    <td>LH 5123</td>
+    <td>23</td>
+    <td id="status-5">Empty</td>
+    <td id="trips-5">0</td>
+    <td>
+      <button onclick="toggleStatus(5)">Toggle Status</button>
+      <button onclick="incrementTrips(5)">Increment Trips</button>
+    </td>
+  </tr>
+  <tr>
+    <td>LH 9216</td>
+    <td>23</td>
+    <td id="status-6">Filled</td>
+    <td id="trips-6">0</td>
+    <td>
+      <button onclick="toggleStatus(6)">Toggle Status</button>
+      <button onclick="incrementTrips(6)">Increment Trips</button>
+    </td>
+  </tr>
+</table>
+
+<script>
+  function toggleStatus(busNumber) {
+    var status = document.getElementById("status-" + busNumber);
+    if (status.innerHTML === "Filled") {
+      status.innerHTML = "Empty";
+    } else {
+      status.innerHTML = "Filled";
+    }
+  }
+
+  function incrementTrips(busNumber) {
+    var trips = document.getElementById("trips-" + busNumber);
+    trips.innerHTML = parseInt(trips.innerHTML) + 1;
+  }
+</script>
+</body>
+
+</html>
